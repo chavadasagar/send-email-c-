@@ -1,0 +1,35 @@
+void sendMessage()
+        {
+            
+            try
+            {
+                 string gmail = "sagarchavada8200@gmail.com";
+                 string password = "sagar80@99135";
+
+
+                MailMessage msg = new MailMessage();
+                msg.From = new MailAddress(gmail);
+                msg.To.Add(from.Text);
+                msg.Subject = "";
+                msg.Body = message.Text;
+
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = "smtp.gmail.com";
+                System.Net.NetworkCredential ntcl = new NetworkCredential();
+                ntcl.UserName = gmail;
+                ntcl.Password = password;
+                smtp.Credentials = ntcl;
+                smtp.EnableSsl = true;
+                smtp.Port = 587;
+                smtp.Send(msg);
+
+                MessageBox.Show("send for this email->"+from.Text);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error"+ex);
+            }
+
+
+        }
