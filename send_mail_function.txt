@@ -3,8 +3,8 @@ void sendMessage()
             
             try
             {
-                 string gmail = "sagarchavada8200@gmail.com";
-                 string password = "sagar80@99135";
+                 string gmail = "youremail@gmail.com";
+                 string password = "********";
 
 
                 MailMessage msg = new MailMessage();
